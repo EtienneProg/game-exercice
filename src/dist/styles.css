@@ -1,0 +1,264 @@
+/*
+
+/!\ FAIRE CETTE COMMANDE A CHAQUE AJOUT DE STYLE OU NOUVEAU STYLE TAILWIND POUR METTRE A JOUR LE OUTPUT.CSS
+
+ npx tailwindcss build dist/styles.css -o dist/output.css
+
+
+*/
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  position: absolute;
+  top: 15%;
+  width: 99vw;
+  height: 100px;
+  text-align: center;
+}
+
+h1 span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce 0.3s ease infinite alternate;
+  font-size: 65px;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc,
+    0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent,
+    0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+h1 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+h1 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+h1 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+h1 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+h1 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+h1 span:nth-child(8) {
+  animation-delay: 0.2s;
+}
+
+h1 span:nth-child(9) {
+  animation-delay: 0.3s;
+}
+
+h1 span:nth-child(10) {
+  animation-delay: 0.4s;
+}
+
+h1 span:nth-child(11) {
+  animation-delay: 0.5s;
+}
+
+h1 span:nth-child(12) {
+  animation-delay: 0.6s;
+}
+
+h1 span:nth-child(13) {
+  animation-delay: 0.7s;
+}
+
+h1 span:nth-child(14) {
+  animation-delay: 0.8s;
+}
+
+/* ANIMATION */
+@keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc,
+      0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc, 0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.content {
+  width: 99vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.StartedContent {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button {
+  position: relative;
+  padding: 16px 30px;
+  font-size: 1.5rem;
+  color: white;
+  border: 2px solid red;
+  border-radius: 4px;
+  text-shadow: 0 0 15px red;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.button:hover {
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px red;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+.button:hover::before {
+  transform: scale(1);
+  transition-delay: 0.2s;
+  box-shadow: 0 0 10px red, 0 0 30px red, 0 0 60px red;
+}
+
+.button[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.GameContent {
+  width: 650px;
+  height: 375px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid red;
+  border-radius: 30px;
+  box-shadow: 0 0 10px red, 0 0 30px red, 0 0 60px red;
+}
+
+.awnser {
+  border: none;
+  padding: 0;
+  width: 4.5ch;
+  color: white;
+  background: repeating-linear-gradient(
+      90deg,
+      dimgrey 0,
+      dimgrey 1ch,
+      transparent 0,
+      transparent 1.5ch
+    )
+    0 100% / 4ch 2px no-repeat;
+  font: 5ch droid sans mono, consolas, monospace;
+  letter-spacing: 0.5ch;
+}
+
+.awnser:focus {
+  outline: none;
+  color: red;
+}
+
+.heart-line {
+  display: flex;
+}
+
+.heart {
+  font-size: 30px;
+  color: gray;
+  border: none;
+  background-color: transparent;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.heart.active {
+  color: red;
+}
+
+.text-color-white {
+  color: #fff;
+}
+
+.text-color-win {
+  color: rgb(2, 255, 2);
+}
+
+.text-color-lose {
+  color: rgb(255, 0, 0);
+}
+
+.restartContent {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rangeValue {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 6em;
+  color: #999;
+  font-weight: 400;
+}
+.range {
+  width: 400px;
+  height: 15px;
+  appearance: none;
+  background: #111;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+.range::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+  border: 4px solid #333;
+  box-shadow: -407px 0 0 400px red;
+}

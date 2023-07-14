@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <div class="flex">
+      <div>
+        <h1>
+          <span>Trouve</span>
+          <span> </span>
+          <span>Mon</span>
+          <span> </span>
+          <span>Chiffre</span>
+          <span> </span>
+          <span>!</span>
+          <span>!</span>
+          <span>!</span>
+        </h1>
+      </div>
+      <div class="content">
+        <div class="StartedContent" id="StartMenu">
+          <div class="mb-10">
+            <span id="rangeValue">1&#x2665;</span>
+            <Input class="range" type="range" value="1" min="1" max="48" id="slideBar"></Input>
+          </div>
+          <a href="#" class="button" id="easy">Facile</a>
+          <a href="#" class="button ml-2 mr-2" id="soft">Moyen</a>
+          <a href="#" class="button" id="hard">Dificile</a>
+        </div>
+        <div class="GameContent hidden" id="GameMenu">
+          <div class="w-full">
+            <div class="heart-line justify-end mr-3 flex flex-wrap" id="heart-line"></div>
+          </div>
+          <div class="flex flex-row w-full items-center justify-center mt-10">
+            <div class="basis-1/4">
+              <input maxlength="3" placeholder="000" class="awnser" id="awnser" />
+            </div>
+            <div class="basis-1/4">
+              <a href="#" class="button" style="padding: 10px 10px" id="validButton">Valider</a>
+            </div>
+          </div>
+          <div class="mt-10 text-white">Resultat :</div>
+          <div class="mt-10 text-5xl text-color-white" id="Resultat"></div>
+        </div>
+        <div class="restartContent hidden" id="RestartMenu">
+          <a href="#" class="button">Restart</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
