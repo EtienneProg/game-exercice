@@ -2,8 +2,8 @@
   "name": "cours",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
   "scripts": {
+    "start": "npx http-server src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "tailwindcss build dist/styles.css -o dist/output.css",
     "watch:css": "tailwindcss build dist/styles.css -o dist/output.css --watch"
@@ -13,5 +13,9 @@
   "type": "module",
   "devDependencies": {
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "moment": "^2.29.4",
+    "http-server": "latest"
   }
 }
